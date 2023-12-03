@@ -1,50 +1,18 @@
-const myName= 'seungjae'
-let myAge = 20
-const hasHobbies = true
-
-
-const summarizeUser = (userName, userAge, userHasHobbies) => 'Name is ' + userName + ', age is ' + userAge + ' and the user has hobbies: ' + userHasHobbies
-
-
-const person={
-    name: 'seungjae',
-    age: 20,
-    greet(){
-        console.log('Hi, I am ' + this.name)
-    }
+const fetchData = ()=> {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => { resolve('Done!') }, 1500)
+  });
+  return promise;
 }
 
-person.greet()
-console.log(person)
+setTimeout(() => {
+  console.log('play.js loaded');
+  fetchData().then(text => {
+    console.log(text);
+  
+  }
+)}, 2000);
+// 가장 나중에 실행됨
 
-const hobbies = ['Sports', 'Cooking']
-for (let hobby of hobbies){
-    console.log(hobby)
-}
-
-console.log(hobbies.map(hobby => 'Hobby: ' + hobby))
-console.log(hobbies)
-
-hobbies.push('Programming')
-console.log(hobbies)
-
-const copiedArray = hobbies.slice()
-console.log(copiedArray)
-
-const copiedArray2 = [...hobbies]
-console.log(copiedArray2)
-
-const toArray = (...args) => {
-    return args
-}
-
-console.log(toArray(1, 2, 3, 4))
-
-const printName =({name, age})=>{
-  console.log(name, age)
-}
-
-printName(person)
-
-const {name, age} = person
-console.log(name, age)
+console.log('play.js executed');
+console.log('hi from play.js')
