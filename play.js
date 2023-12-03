@@ -4,3 +4,15 @@ const hasHobbies = true
 
 
 const summarizeUser = (userName, userAge, userHasHobbies) => 'Name is ' + userName + ', age is ' + userAge + ' and the user has hobbies: ' + userHasHobbies
+
+
+const person={
+    name: 'seungjae',
+    age: 20,
+    greet(){
+        console.log('Hi, I am ' + this.name)
+    }
+}
+
+person.greet()
+console.log(person)
