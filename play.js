@@ -1,5 +1,5 @@
 const myName= 'seungjae'
-let age = 20
+let myAge = 20
 const hasHobbies = true
 
 
@@ -39,3 +39,12 @@ const toArray = (...args) => {
 }
 
 console.log(toArray(1, 2, 3, 4))
+
+const printName =({name, age})=>{
+  console.log(name, age)
+}
+
+printName(person)
+
+const {name, age} = person
+console.log(name, age)
